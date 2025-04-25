@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #4e2e63;
+    background: linear-gradient(0deg, rgba(78, 46, 99, 1) 0%, rgba(23, 23, 71, 1) 42%);
+}
+
+.content{
+    border-radius: 15px;
+    height: 60%;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    background: #040131;
+    color:#FF00FF;
+}
+.content::before{
+    content: ""; 
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 0 3px #00FFFF;
+    background: #03011f;
+    left: 60%;
+}
+
+.login-content{
+    display: none;
+    position: relative;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.description{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+.btn{
+    background-color: #ff00ff;
+    color: #03011f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px #ff00ff;
+    transition: box-shadow 0.1s ease-out;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+}
+
+.btn:hover{
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+}
+
+.first-column{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+
+.second-column{
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form input{
+    height: 45px;
+    border: none;
+    background: #090450;
+    border: #03011f;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #ff00ff;
+    color:#FF00FF;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 14px;
+    margin-bottom: 8px;
+    text-decoration-line: none;
+    outline: none;
+}
+
+.icon-modify{
+    padding: 0 5px;
+}
+
+.sign-content{
+    display: flex;
+    position: absolute;
+}
+
+.sign-content .first-column{
+    order: 2;
+}
+
+.sign-content .second-column{
+    order: 1;
+}
