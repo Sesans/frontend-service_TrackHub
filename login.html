@@ -8,14 +8,32 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body>
+<body className="sign-in-js">
+  
+  <header>
+    <nav class="page-nav">
+      <h2 class="title">TrackHub</h2>
+      <div class="nav-links">
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search">
+        </div>
+        <div class="links-container">
+          <a href="#">Home</a>
+          <a href="#">Songs</a>
+          <a href="#">Artists</a>
+          <button class="nav-btn"><a href="#">Account</a></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
   <div class="container">
     <div class="content login-content">
 
       <div class="first-column">
         <h2 class="title">Hello, new here?</h2>
         <p class="description">Register with your personal data!</p>
-        <button class="btn">Sign in</button>
+        <button id="signin" class="btn">Sign in</button>
       </div>
 
       <div class="second-column">
@@ -45,10 +63,10 @@
       <div class="first-column">
         <h2 class="title">Already have an account?</h2>
         <p class="description">Enter with your personal details</p>
-        <button class="btn">log in</button>
+        <button id="login" class="btn">log in</button>
       </div>
 
-      <div class="second column">
+      <div class="second-column">
 
         <h2 class="title">Create account at TrackHub!</h2>
         <p class="description">Insert your personal information:</p>
@@ -59,15 +77,15 @@
             <input type="text" placeholder="Name">
           </label>
           <label class="label-input" for="">
-            <i class="fa-solid fa-calendar-days"></i>
-            <input type="datetime">
+            <i class="far fa-calendar icon-modify"></i>
+            <input type="date">
           </label>
           <label class="label-input" for="">
-            <i class="fa-regular fa-envelope"></i>
+            <i class="far fa-envelope icon-modify"></i>
             <input type="email" placeholder="Email">
           </label>
           <label class="label-input" for="">
-            <i class="fa-solid fa-lock"></i>
+            <i class="fas fa-lock icon-modify"></i>
             <input type="password" placeholder="password">
           </label>
           <button class="btn">sign up</button>
@@ -76,5 +94,6 @@
 
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

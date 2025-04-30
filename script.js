@@ -1,4 +1,15 @@
 const loginForm = document.querySelector('.login-form');
+var btnSignin = document.querySelector('#signin');
+var btnLogin = document.querySelector('#login');
+var body = document.querySelector('body');
+
+btnSignin.addEventListener('click', function() {
+  body.className = 'sign-in-js';
+});
+
+btnLogin.addEventListener('click', function(){
+  body.className = 'sign-up-js';
+});
 
 loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
