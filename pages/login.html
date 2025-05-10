@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Musicdex</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="/styles/login.css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body className="sign-in-js">
+<body className="">
   
   <header>
     <nav class="page-nav">
@@ -18,8 +18,8 @@
           <input type="text" class="search-bar" placeholder="Search">
         </div>
         <div class="links-container">
-          <a href="#">Home</a>
-          <a href="#">Songs</a>
+          <a href="/pages/home.html">Home</a>
+          <a href="/pages/feed-page.html">Songs</a>
           <a href="#">Artists</a>
           <button class="nav-btn"><a href="#">Account</a></button>
         </div>
@@ -94,6 +94,11 @@
 
     </div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('sign-in-js');
+    });
+  </script>
+  <script src="/scripts/script.js"></script>
 </body>
 </html>

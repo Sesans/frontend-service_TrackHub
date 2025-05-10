@@ -5,7 +5,7 @@
     font-family: 'Orbitron', sans-serif;
 }
 .page-nav{
-    height: 100px;
+    height: 10dvh;
     background: #03011f;
     display: flex;
     align-items: center;
@@ -36,10 +36,10 @@
 
 .search-bar{
     width: 50%;
-    border: 3px solid #4e2e63;
-    padding: 5px 10px;
+    border: 2px solid #00FFFF;
+    padding: 8px 15px;
     border-radius: 14px;
-    color: #FF00FF;
+    color: #00FFFF;
     font-size: 14px;
     font-weight: bold;
     background: transparent;
@@ -54,13 +54,13 @@
 
 a{
     text-decoration: none;
-    color: #FF00FF;
+    color: #00FFFF;
     font-size: 20px;
     font-weight: bold;
 }
 
 .nav-btn{
-    border: 3px solid #FF00FF;
+    border: 3px solid #00FFFF;
     padding: 5px 10px;
     border-radius: 30px;
     background: transparent;
@@ -75,7 +75,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90dvh;
     background: #4e2e63;
     background: linear-gradient(0deg, rgba(78, 46, 99, 1) 0%, rgba(23, 23, 71, 1) 42%);
 }
@@ -88,15 +88,13 @@ a{
     align-items: center;
     position: relative;
     background: #040131;
-    color:#FF00FF;
+    color:#00FFFF;
 }
 .content::before{
     content: ""; 
     position: absolute;
     width: 40%;
     height: 100%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
     box-shadow: 0 0 3px #00FFFF;
     background: #03011f;
     left: 0;
@@ -124,12 +122,12 @@ a{
 }
 
 .btn{
-    background-color: #ff00ff;
+    background-color: #00FFFF;
     color: #03011f;
     border: none;
     padding: 12px 24px;
     border-radius: 12px;
-    box-shadow: 0 0 5px #ff00ff;
+    box-shadow: 0 0 5px #00FFFF;
     transition: box-shadow 0.1s ease-out;
     cursor: pointer;
     font-weight: bold;
@@ -139,7 +137,7 @@ a{
 }
 
 .btn:hover{
-    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    box-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF;
 }
 
 .first-column{
@@ -167,8 +165,8 @@ a{
     border: none;
     background: #090450;
     border-radius: 15px;
-    box-shadow: 0 0 5px #ff00ff;
-    color:#FF00FF;
+    box-shadow: 0 0 5px #00FFFF;
+    color:#00FFFF;
     font-size: 14px;
     font-weight: bold;
     padding-left: 14px;
@@ -179,6 +177,22 @@ a{
 
 .icon-modify{
     padding: 0 5px;
+}
+
+.music-feed {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+  
+.song-card {
+    background: linear-gradient(135deg, #1a1a40, #0a0a23);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #00FFFF;
 }
 
 .sign-content{
@@ -208,16 +222,12 @@ a{
 
 .sign-in-js .content::before{
     left: 60%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    animation: slidein 1.3s ease-in-out;
+    animation: slidein 1.3s ease-in-out forwards;
     z-index: 12;
 }
 
 .sign-up-js .content::before{
-    animation: slideout 1.3s ease-in-out;
+    animation: slideout 1.3s ease-in-out forwards;
     z-index: 12;
 }
 
@@ -261,8 +271,14 @@ a{
 @keyframes rightShift{
     from{
         transform: translateX(0%);
-        opacity: .8;
+        opacity: .6;
         z-index: 12;
+    }
+    50%{
+        opacity: .2;
+    }
+    75%{
+        opacity: 0;
     }
     100%{
         transform: translateX(15%);
@@ -274,18 +290,30 @@ a{
 
 @keyframes slidein {
     0%{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
         transform: translateX(-150%);
     }
     100%{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
         transform: translateX(0%);
     }
 }
 
 @keyframes slideout {
     0% {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
         transform: translateX(150%);
     }
     100%{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
         transform: translateX(0%);
     }
 }
