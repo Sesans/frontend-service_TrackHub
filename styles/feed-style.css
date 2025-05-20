@@ -95,7 +95,10 @@ a{
 
 #music-feed{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
     overflow: hidden;
     margin: 0 auto;
     border-radius: 8px;
@@ -107,23 +110,24 @@ a{
 
 .music-card{
     display: flex;
+    flex-direction: column;
     overflow: hidden;
     cursor: pointer;
     text-decoration: none;
     color: #FF00FF;
-    height: 65px;
+    height: 100%;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    position: relative;
+    backdrop-filter: none;
+    justify-content: flex-end;
 }
 
 .music-card:hover{
-    background: linear-gradient(0deg, rgba(78, 46, 99, 1) 0%, rgba(23, 23, 71, 1) 42%);
-}
-
-.music-card img{
-    background: white;
-    width: 150px;
-    height: 100%;
-    object-fit: cover;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .card-content{
@@ -139,17 +143,30 @@ a{
     font-weight: bold;
 }
 
-.card-composer{
+.card-album{
     height: 30%;
     font-size: 0.9rem;
     opacity: .8;
 }
 
+.card-title,
+.card-album {
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover .card-title,
+.music-card:hover .card-album {
+    transform: translateY(-5px);
+}
+
 .card-buttons{
-    height: 40%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     display: flex;
-    justify-content: end;
-    align-items: end;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: flex-end;
 }
 
 .card-buttons button{
@@ -162,6 +179,7 @@ a{
     color: #00FFFF;
 }
 
-.card-buttons button:hover{
-    background-color: #FF6B00;
+.music-card:hover .card-buttons {
+    opacity: 1;
+    transform: translateY(0);
 }
