@@ -8,7 +8,6 @@
 body{
     display: flex;
     flex-direction: column;
-    height: fit-content;
 }
 
 .page-nav{
@@ -79,7 +78,7 @@ a{
 }
 
 .container{
-    min-height: 120dvh;
+    height: 90dvh;
     display: flex;
     width: 100%;
     justify-content: center;

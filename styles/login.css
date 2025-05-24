@@ -95,7 +95,7 @@ a{
     position: absolute;
     width: 40%;
     height: 100%;
-    box-shadow: 0 0 3px #00FFFF;
+    box-shadow: 0 0 3px #00FFFF, 0 0 3px #00FFFF inset;
     background: #03011f;
     left: 0;
 }
