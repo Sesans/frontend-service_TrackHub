@@ -79,83 +79,147 @@ a{
 }
 
 .container{
-    min-height: 90dvh;
+    min-height: fit-content;
     background: #03011f;
     display: flex;
-    width: 100%;
 }
 
 .menu-bar{
-    width: 20%;
-    color: black;
-    background: rgba(23, 23, 71, 1);
-    border-radius: 8px;
-    height: 88dvh;
+    display: flex;
+    position: relative;
+    background-color: #03020f;
+    width: 15%;
+    min-height: 90dvh;
+    height: fill;
+    border: 3px solid #FF6B00;
+    box-shadow: 0 0 3px #FF6B00, 0 0 3px #FF6B00 inset; 
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.song-label{
+    display: flex;
+    color: #8A2BE2;
+    height: 40px;
+    padding: 10px 10px;
+    border-bottom: 1px solid #191835;
+}
+
+.title-label{
+    margin-left: 50px;
+}
+
+.artist-label{
+    margin-left: 680px;
+}
+
+.tag-list{
+    padding: 10px;
+    color: #006eff;
+    background: #191835;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+}
+
+.inner{
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    background-color: #03011f;
+    padding: 0.7rem 1rem;
+    color: #FF6B00;
+    border: 2px solid #FF6B00;
+    border-radius: 0.4rem;
+    box-shadow: 
+    0 0.1rem 0.2rem #00000033,
+    0 0.1rem 0.5rem #0000004d,
+    0 0.2rem 1.5rem #00000066;
+}
+
+.tag span{
+    font-size: 1.2rem;
+    color: #FF6B00;
 }
 
 #music-feed{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 8px;
-    width: 78%;
-    height: 88dvh;
-    justify-items: center;
-    background: rgba(23, 23, 71, 1);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .music-card{
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    flex-direction: row;
+    overflow:scroll;
     cursor: pointer;
     text-decoration: none;
-    color: #FF00FF;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    color: #00FFFF;
+    height: 90px;
+    flex-grow: 1;
     transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
     padding: 10px;
     position: relative;
     backdrop-filter: none;
-    justify-content: flex-end;
+    justify-content: start;
 }
 
-.music-card:hover{
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+.song-index{
+    align-content: center;
+    width: 60px;
+    color: #8A2BE2;
+    margin: 0 auto;
+    font-weight: lighter;
+    opacity: .6;
 }
 
 .card-content{
     display: flex;
-    flex-direction: column;
-    width: 100%;
     padding-left: 10px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .card-title{
-    height: 40%;
     font-size: larger;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #FF00FF;
+    width: 45%;
+    mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    align-content: center;
 }
 
 .card-album{
-    height: 30%;
-    font-size: 0.9rem;
+    width: 35%;
+    font-size: 1rem;
     opacity: .8;
+    align-content: center;
 }
 
 .card-title,
-.card-album {
+.card-album{
     transition: transform 0.3s ease;
 }
 
 .music-card:hover .card-title,
-.music-card:hover .card-album {
+.music-card:hover .card-album{
     transform: translateY(-5px);
 }
 
@@ -167,6 +231,7 @@ a{
     gap: 8px;
     margin-top: 10px;
     justify-content: flex-end;
+    width: 20%;
 }
 
 .card-buttons button{
@@ -179,7 +244,7 @@ a{
     color: #00FFFF;
 }
 
-.music-card:hover .card-buttons {
+.music-card:hover .card-buttons{
     opacity: 1;
     transform: translateY(0);
 }

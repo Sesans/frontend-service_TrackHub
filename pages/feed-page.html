@@ -9,28 +9,48 @@
     <title>TrackHub Songs</title>
 </head>
 <body>
-    <header>
-        <nav class="page-nav">
-          <h2 class="title">TrackHub</h2>
-          <div class="nav-links">
-            <div class="search-container">
-              <input type="text" class="search-bar" placeholder="Search">
-            </div>
-            <div class="links-container">
-              <a href="/pages/home.html">Home</a>
-              <a href="#">Songs</a>
-              <a href="#">Artists</a>
-              <button class="nav-btn"><a href="/pages/login.html">Account</a></button>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div class="container">
-        <div class="menu-bar">
-          options
+  <header>
+    <nav class="page-nav">
+      <h2 class="title">TrackHub</h2>
+      <div class="nav-links">
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search">
         </div>
-        <ul id="music-feed"></ul>
+        <div class="links-container">
+          <a href="/pages/home.html">Home</a>
+          <a href="#">Songs</a>
+          <a href="#">Artists</a>
+          <button class="nav-btn"><a href="/pages/login.html">Account</a></button>
+        </div>
       </div>
-      <script src="/scripts/feed-script.js"></script>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="menu-bar">
+      options
+    </div>
+    <div class="content">
+      <div class="tag-list">
+        <div class="inner">
+          <button class="tag">
+            <span>#</span>Popular
+          </button>
+          <div class="tag">
+            <span>#</span>Most Liked
+          </div>
+          <div class="tag">
+            <span>#</span>Most Commented
+          </div>
+        </div>
+      </div>
+      <div class="song-label">
+        <span>#</span>
+        <span class="title-label">Title</span>
+        <span class="artist-label">Artist</span>
+      </div>
+      <ul id="music-feed"></ul>
+    </div>
+  </div>
+  <script src="/scripts/feed-script.js"></script>
 </body>
 </html>
