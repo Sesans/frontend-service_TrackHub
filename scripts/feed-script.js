@@ -4,16 +4,21 @@ document.addEventListener("DOMContentLoaded", () =>{
 
   async function loadSongs() {
     try {
+      const header = {
+        'Content-type': 'application/json',
+      }
+      if(token){
+        header['Authorization'] = 'Bearer ' + token;
+      }
+      console.log(token);
       const response = await fetch('http://localhost:8082/music/list', {
         method: 'GET',
-        headers: {
-          'Content-type': 'application/json',
-          'Authorization': 'Bearer ' + token
-        }
+        headers: header,
       });
+
       const songs = await response.json();
       
-      songs.forEach(song => {
+      songs.forEach((song, index) => {
         const card = document.createElement('a');
         const likeIconClass = song.liked ? 'fas' : 'far';
         const likedClass = song.liked ? 'liked' : '';
@@ -21,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         card.className = 'music-card';
         card.innerHTML = `
+          <div class="song-index"><span>${index}. </span></div>
           <div class="card-content">
             <div class="card-title">${song.title}</div>
             <div class="card-album">${song.album}</div>
