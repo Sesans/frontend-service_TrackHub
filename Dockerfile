@@ -1,5 +1,8 @@
+FROM node:18 AS builder
+WORKDIR /app
+COPY . .
+RUN npm install && npm run build
+
 FROM nginx:alpine
-
-copy . /usr/share/nginx/html
-
-expose 80
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 80
