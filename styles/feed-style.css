@@ -134,7 +134,7 @@ a{
     gap: 1rem;
 }
 
-.tag{
+.tag, .show-btn{
     display: flex;
     align-items: center;
     gap: 0 0.2rem;
@@ -247,4 +247,18 @@ a{
 .music-card:hover .card-buttons{
     opacity: 1;
     transform: translateY(0);
+}
+
+.show-more{
+    display: flex;
+    margin: 10px auto;
+}
+
+.hide-btn{
+    display: none;
+}
+
+.show-btn:hover{
+    background: #FF6B00;
+    color: #03011f;
 }
