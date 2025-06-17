@@ -1,0 +1,117 @@
+.page-nav{
+    height: 10dvh;
+    background: #03011f;
+    display: flex;
+    align-items: center;
+}
+
+.page-nav .title{
+    width: 25%;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 80px;
+    color: #FF6B00; 
+}
+
+.nav-content{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.search-container{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 30px;
+}
+
+.suggestion-list{
+    display: none;
+    width: 70%;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 2px solid #00FFFF;
+    border-top: none;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-color: black;
+    font-size: 14px;
+    z-index: 14;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+}
+
+.suggestion-item{
+    padding: 8px 15px;
+    cursor: pointer;
+    list-style: none;
+    color: #00FFFF91;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.suggestion-item:hover{
+    background-color: rgba(0, 225, 255, 0.1);
+}
+
+.suggestion-list.visible{
+    display: block;
+}
+
+.search-bar{
+    width: 70%;
+    border: 2px solid #00FFFF;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    padding: 8px 15px;
+    color: #00FFFF;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    outline: none;
+    z-index: 1;
+    position: relative;
+}
+
+.search-bar.remove-bottom {
+    border-bottom: none;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+mark{
+    background: none;
+    color: #00FFFF;
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.links-container a{
+    text-decoration: none;
+    color: #00FFFF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.account-btn{
+    border: 3px solid #00FFFF;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    white-space: nowrap;
+}

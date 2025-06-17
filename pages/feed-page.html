@@ -4,53 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/feed-style.css"/>
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/songList.css">
+    <link rel="stylesheet" href="/styles/songDetail.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>TrackHub Songs</title>
 </head>
 <body>
-  <header>
-    <nav class="page-nav">
-      <h2 class="title">TrackHub</h2>
-      <div class="nav-links">
-        <div class="search-container">
-          <input type="text" class="search-bar" placeholder="Search">
-        </div>
-        <div class="links-container">
-          <a href="/pages/home.html">Home</a>
-          <a href="#">Songs</a>
-          <a href="#">Artists</a>
-          <button class="nav-btn"><a href="/pages/login.html">Account</a></button>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <div id="header-container"></div>
+
   <div class="container">
     <div class="menu-bar">
       options
     </div>
-    <div class="content">
-      <div class="tag-list">
-        <div class="inner">
-          <button class="tag">
-            <span>#</span>Popular
-          </button>
-          <div class="tag">
-            <span>#</span>Most Liked
-          </div>
-          <div class="tag">
-            <span>#</span>Most Commented
-          </div>
-        </div>
-      </div>
-      <div class="song-label">
-        <span>#</span>
-        <span class="title-label">Title</span>
-        <span class="artist-label">Artist</span>
-      </div>
-      <ul id="music-feed"></ul>
-      <div class="show-more"><button class="show-btn">SHOW MORE</button></div>
-    </div>
+
+    <div id="songs-content" role="region" aria-live="polite"></div>
+
   </div>
   <script type="module" src="/scripts/feed-script.js"></script>
 </body>

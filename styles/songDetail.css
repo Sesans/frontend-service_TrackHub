@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+#song-detail-content{
+    display: flex;
+    height: fit-content;
+    min-height: 80dvh;
+    width: 100%;
+    color: #00FFFF;
+}
+
+.song-info{
+    width: 20%;
+    height: 350px;
+    padding: 10px;
+}
+
+.song-lyrics p{
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+.verse-block{
+    margin-bottom: 1.5rem;
+}

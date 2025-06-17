@@ -1,74 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
 }
-.page-nav{
+
+#header-container{
     height: 10dvh;
-    background: #03011f;
-    display: flex;
-    align-items: center;
-}
-
-.page-nav .title{
-    width: 25%;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 80px;
-    color: #FF6B00; 
-}
-
-.nav-links{
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
-}
-
-.search-container{
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-    margin-right: 30px;
-}
-
-.search-bar{
-    width: 50%;
-    border: 2px solid #00FFFF;
-    padding: 8px 15px;
-    border-radius: 14px;
-    color: #00FFFF;
-    font-size: 14px;
-    font-weight: bold;
-    background: transparent;
-    outline: none;
-}
-
-.links-container{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-a{
-    text-decoration: none;
-    color: #00FFFF;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-btn{
-    border: 3px solid #00FFFF;
-    padding: 5px 10px;
-    border-radius: 30px;
-    background: transparent;
-    cursor: pointer;
-    font-weight: bold;
-    width: 150px;
-    height: 45px;
-    white-space: nowrap;
+    background: #040131;
 }
 
 .container{
@@ -90,6 +31,7 @@ a{
     background: #040131;
     color:#00FFFF;
 }
+
 .content::before{
     content: ""; 
     position: absolute;
@@ -98,10 +40,17 @@ a{
     box-shadow: 0 0 3px #00FFFF, 0 0 3px #00FFFF inset;
     background: #03011f;
     left: 0;
+    transform: translateX(0%);
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .login-content{
     display: flex;
+    position: absolute;
 }
 
 .login-content .second-column{
@@ -216,7 +165,7 @@ a{
 
 .sign-in-js .sign-content .first-column,
 .sign-in-js .sign-content .second-column{
-    animation: appearLate 1s ease forwards;
+    animation: appearLate 1.1s ease-in-out forwards;
     animation-delay: 1s;
 }
 
@@ -227,6 +176,11 @@ a{
 }
 
 .sign-up-js .content::before{
+    left: 0%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     animation: slideout 1.3s ease-in-out forwards;
     z-index: 12;
 }
@@ -239,7 +193,7 @@ a{
 .sign-up-js .login-content .first-column,
 .sign-up-js .login-content .second-column{
     z-index: -1;
-    animation: appearLate 1s ease forwards;
+    animation: appearLate 1.1s ease-in-out forwards;
     animation-delay: 1s;
 }
 
@@ -327,10 +281,10 @@ a{
         opacity: .2;
     }
     50%{
-        opacity: .5;
+        opacity: .7;
     }
     75%{
-        opacity: .7;
+        opacity: .9;
     }
     to{
         opacity: 1;

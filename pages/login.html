@@ -5,27 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login in TrackHub</title>
   <link rel="stylesheet" href="/styles/login.css"/>
+  <link rel="stylesheet" href="/styles/header.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body className="">
+<body className="sign-in-js">
   
-  <header>
-    <nav class="page-nav">
-      <h2 class="title">TrackHub</h2>
-      <div class="nav-links">
-        <div class="search-container">
-          <input type="text" class="search-bar" placeholder="Search">
-        </div>
-        <div class="links-container">
-          <a href="/pages/home.html">Home</a>
-          <a href="/pages/feed-page.html">Songs</a>
-          <a href="#">Artists</a>
-          <button class="nav-btn"><a href="#">Account</a></button>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <div id="header-container"></div>
+
 
   <div class="container">
     <div class="content login-content">
@@ -98,11 +85,7 @@
 
     </div>
   </div>
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('sign-in-js');
-    });
-  </script>
-  <script src="/scripts/script.js"></script>
+  <script type="module" src="/scripts/script.js"></script>
+  <script type="module" src="/scripts/loadComponent.js"></script>
 </body>
 </html>

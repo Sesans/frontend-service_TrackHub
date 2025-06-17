@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,76 +7,14 @@
     font-family: 'Orbitron', sans-serif;
 }
 
+#header-container{
+    height: 10dvh;
+    background: #03011f;
+}
+
 body{
     display: flex;
     flex-direction: column;
-}
-
-.page-nav{
-    height: 10dvh;
-    background: #03011f;
-    display: flex;
-    align-items: center;
-}
-
-.page-nav .title{
-    width: 25%;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 80px;
-    color: #FF6B00; 
-}
-
-.nav-links{
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
-}
-
-.search-container{
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-    margin-right: 30px;
-}
-
-.search-bar{
-    width: 50%;
-    border: 2px solid #00FFFF;
-    padding: 8px 15px;
-    border-radius: 14px;
-    color: #00FFFF;
-    font-size: 14px;
-    font-weight: bold;
-    background: transparent;
-    outline: none;
-}
-
-.links-container{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-a{
-    text-decoration: none;
-    color: #00FFFF;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-btn{
-    border: 3px solid #00FFFF;
-    padding: 5px 10px;
-    border-radius: 30px;
-    background: transparent;
-    cursor: pointer;
-    font-weight: bold;
-    width: 150px;
-    height: 45px;
-    white-space: nowrap;
 }
 
 .container{

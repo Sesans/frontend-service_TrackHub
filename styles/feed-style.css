@@ -1,81 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron', 'sans-serif';
+}
+
+#header-container{
+    height: 10dvh;
+    background: #03011f;
 }
 
 body{
     display: flex;
     flex-direction: column;
     height: 100dvh;
-}
-
-.page-nav{
-    height: 10dvh;
-    background: #03011f;
-    display: flex;
-    align-items: center;
-}
-
-.page-nav .title{
-    width: 25%;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 80px;
-    color: #FF6B00; 
-}
-
-.nav-links{
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
-}
-
-.search-container{
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-    margin-right: 30px;
-}
-
-.search-bar{
-    width: 50%;
-    border: 2px solid #00FFFF;
-    padding: 8px 15px;
-    border-radius: 14px;
-    color: #00FFFF;
-    font-size: 14px;
-    font-weight: bold;
-    background: transparent;
-    outline: none;
-}
-
-.links-container{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-a{
-    text-decoration: none;
-    color: #00FFFF;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-btn{
-    border: 3px solid #00FFFF;
-    padding: 5px 10px;
-    border-radius: 30px;
-    background: transparent;
-    cursor: pointer;
-    font-weight: bold;
-    width: 150px;
-    height: 45px;
-    white-space: nowrap;
 }
 
 .container{
@@ -95,170 +35,46 @@ a{
     box-shadow: 0 0 3px #FF6B00, 0 0 3px #FF6B00 inset; 
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.song-label{
-    display: flex;
-    color: #8A2BE2;
-    height: 40px;
-    padding: 10px 10px;
-    border-bottom: 1px solid #191835;
-}
-
-.title-label{
-    margin-left: 50px;
-}
-
-.artist-label{
-    margin-left: 680px;
-}
-
-.tag-list{
-    padding: 10px;
-    color: #006eff;
-    background: #191835;
-    width: 100%;
-    height: 80px;
-    position: relative;
-    overflow: hidden;
-    align-content: center;
-}
-
-.inner{
-    width: fit-content;
-    display: flex;
-    gap: 1rem;
-}
-
-.tag, .show-btn{
-    display: flex;
-    align-items: center;
-    gap: 0 0.2rem;
-    font-size: 0.9rem;
-    font-weight: bolder;
-    background-color: #03011f;
-    padding: 0.7rem 1rem;
-    color: #FF6B00;
-    border: 2px solid #FF6B00;
-    border-radius: 0.4rem;
-    box-shadow: 
-    0 0.1rem 0.2rem #00000033,
-    0 0.1rem 0.5rem #0000004d,
-    0 0.2rem 1.5rem #00000066;
-}
-
-.tag span{
-    font-size: 1.2rem;
-    color: #FF6B00;
-}
-
-#music-feed{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.music-card{
-    display: flex;
-    flex-direction: row;
-    overflow:scroll;
-    cursor: pointer;
-    text-decoration: none;
-    color: #00FFFF;
-    height: 90px;
-    flex-grow: 1;
-    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
-    padding: 10px;
-    position: relative;
-    backdrop-filter: none;
-    justify-content: start;
-}
-
-.song-index{
-    align-content: center;
-    width: 60px;
-    color: #8A2BE2;
-    margin: 0 auto;
-    font-weight: lighter;
-    opacity: .6;
-}
-
-.card-content{
-    display: flex;
-    padding-left: 10px;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.card-title{
-    font-size: larger;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #FF00FF;
-    width: 45%;
-    mask-image: linear-gradient(to right, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
-    align-content: center;
-}
-
-.card-album{
-    width: 35%;
-    font-size: 1rem;
-    opacity: .8;
-    align-content: center;
-}
-
-.card-title,
-.card-album{
-    transition: transform 0.3s ease;
-}
-
-.music-card:hover .card-title,
-.music-card:hover .card-album{
-    transform: translateY(-5px);
-}
-
-.card-buttons{
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    display: flex;
-    gap: 8px;
-    margin-top: 10px;
-    justify-content: flex-end;
-    width: 20%;
-}
-
-.card-buttons button{
-    background-color: transparent;
+.back-btn{
+    background: none;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    color: #3498db;
+    font-size: 1rem;
     cursor: pointer;
-    margin-left: 10px;
-    color: #00FFFF;
+    padding: 0.5rem 0;
+    text-align: left;
 }
 
-.music-card:hover .card-buttons{
-    opacity: 1;
-    transform: translateY(0);
+.back-btn:hover{
+    text-decoration: underline;
 }
 
-.show-more{
+#songs-content{
     display: flex;
-    margin: 10px auto;
+    flex-direction: column;
+    width: 100%;
 }
 
-.hide-btn{
-    display: none;
-}
 
-.show-btn:hover{
-    background: #FF6B00;
-    color: #03011f;
+.modal{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    z-index: 20;
+}
+  
+.modal-content{
+    background: #191835;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: #FF6B00;
 }

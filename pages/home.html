@@ -4,27 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>TrackHub</title>
 </head>
 <body>
-  <header>
-    <nav class="page-nav">
-      <h2 class="title">TrackHub</h2>
-      <div class="nav-links">
-        <div class="search-container">
-          <input type="text" class="search-bar" placeholder="Search">
-        </div>
-        <div class="links-container">
-          <a href="/pages/home.html">Home</a>
-          <a href="/pages/feed-page.html">Songs</a>
-          <a href="#">Artists</a>
-          <button class="nav-btn"><a href="/pages/login.html">Account</a></button>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <div id="header-container"></div>
 
   <div class="container">
     <div class="banner-section">
@@ -51,5 +37,7 @@
     <footer>
       this is the footer
     </footer>
+    <script type="module" src="/scripts/loadComponent.js"></script>
+    <script type="module" src="/scripts/home.js"></script>
 </body>
 </html>
