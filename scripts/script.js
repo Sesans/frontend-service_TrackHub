@@ -1,3 +1,6 @@
+import { loadHeader } from "./loadComponent.js";
+loadHeader();
+
 document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.querySelector('.login-form');
   const btnSignin = document.querySelector('#signin');
@@ -22,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const login = document.getElementById('login-email')?.value || '';
       const password = document.getElementById('login-password')?.value || '';
-
-      console.log(login, password);
 
       try {
         const response = await fetch('http://localhost:8080/auth/login', {

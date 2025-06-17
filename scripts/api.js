@@ -1,8 +1,8 @@
 export async function fetchSongs(page, size, sortBy = 'LIKE_COUNT', direction = 'DESC') {
-    const token = localStorage.getItem('token');
     const url = `http://localhost:8082/music/search?page=${page}&size=${size}&sortBy=${sortBy}&direction=${direction}`;
+    const token = localStorage.getItem('token');
     const headers = {
-        'Content-type': 'application/json',
+        'Content-Type': 'application/json',
     };
     
     if(token){
@@ -12,6 +12,21 @@ export async function fetchSongs(page, size, sortBy = 'LIKE_COUNT', direction = 
     const response = await fetch(url, {headers});
     if(!response.ok) throw new Error('Error fetching songs');
     return await response.json();
+}
+
+export async function getSong(id) {
+    const url = `http://localhost:8082/music/${id}`;
+    const token = localStorage.getItem('token');
+    const headers = {
+        'Content-Type': 'application/json',
+    };
+
+    if(token){
+        headers['Authorization'] = 'Bearer ' + token;
+    }
+    const getResponse = await fetch(url, {headers});
+    if(!getResponse.ok) throw new Error('Error fetching songs');
+    return await getResponse.json();
 }
 
 export async function likeSong(songId, method = 'POST') {
@@ -25,4 +40,15 @@ export async function likeSong(songId, method = 'POST') {
       });
 
     return likeResponse;
+}
+
+export async function autoCompleteSuggest(query) {
+    if(!query.trim()) return;
+    const suggestResponse = await fetch(`http://localhost:8082/music/autocomplete?query=${query}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    return suggestResponse;
 }
